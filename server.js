@@ -1,9 +1,17 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const admin = require('./src/config/firebase.js');  // ← Config con mayúscula
+const admin = require('./src/config/firebase.js');
 const PORT = 3000;
 const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('./src/config/swagger.js');  // ← Config con mayúscula
+const swaggerSpec = require('./src/config/swagger.js');
+
+// ========== CORS ==========
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.use(express.json({ limit: '10mb' }));
 
