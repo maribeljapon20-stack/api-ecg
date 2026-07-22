@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const pool = require('../src/config/db.js');
 
 const guardarLectura = async (paciente_id, frecuencia, condicion, riesgo, datos) => {
     const result = await pool.query(

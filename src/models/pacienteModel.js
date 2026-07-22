@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const pool = require('../src/config/db.js');
 
 const crearPaciente = async (nombre, edad, medico_id) => {
     const result = await pool.query(

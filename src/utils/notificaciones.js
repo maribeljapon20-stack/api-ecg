@@ -1,4 +1,4 @@
-const admin = require('../config/firebase');
+const admin = require('../src/config/firebase.js');
 
 const enviarNotificacion = async (token, titulo, cuerpo, datos = {}) => {
     try {
