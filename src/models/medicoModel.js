@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const pool = require('../Config/db');
 const bcrypt = require('bcryptjs');
 
 const crearMedico = async (email, password, nombre) => {

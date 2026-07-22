@@ -1,5 +1,5 @@
 const PDFDocument = require('pdfkit');
-const pool = require('../config/db');
+const pool = require('../Config/db');
 
 const generarReporte = async (req, res) => {
     try {
