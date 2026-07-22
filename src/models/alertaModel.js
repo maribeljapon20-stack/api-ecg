@@ -1,4 +1,4 @@
-const pool = require('../src/config/db.js');
+const pool = require('../config/db');
 
 const guardarAlerta = async (paciente_id, condicion, riesgo, mensaje) => {
     const result = await pool.query(
