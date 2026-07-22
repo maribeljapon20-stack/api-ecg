@@ -2,7 +2,7 @@ const lecturaModel = require('../models/lecturaModel');
 const alertaModel = require('../models/alertaModel');
 const { analizarRitmo, calcularFrecuencia } = require('../utils/detectorRitmo');
 const { enviarNotificacion } = require('../utils/notificaciones');
-const admin = require('../src/config/firebase.js');
+const admin = require('../config/firebase'); // ✅ Correcto
 const pool = require('../config/db');
 const recibirDatos = async (req, res) => {
     try {
