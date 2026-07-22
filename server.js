@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const admin = require('./src/config/firebase');
+const admin = require('./src/config/firebase.js');  // ← Agregado .js
 const PORT = 3000;
 const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('./src/config/swagger');
+const swaggerSpec = require('./src/config/swagger.js');  // ← Agregado .js
 
 app.use(express.json({ limit: '10mb' }));
 
@@ -11,11 +11,11 @@ app.use(express.json({ limit: '10mb' }));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Rutas
-const authRoutes = require('./src/routes/authRoutes');
-const pacienteRoutes = require('./src/routes/pacienteRoutes');
-const lecturaRoutes = require('./src/routes/lecturaRoutes');
-const alertaRoutes = require('./src/routes/alertaRoutes');
-const reporteRoutes = require('./src/routes/reporteRoutes');
+const authRoutes = require('./src/routes/authRoutes.js');
+const pacienteRoutes = require('./src/routes/pacienteRoutes.js');
+const lecturaRoutes = require('./src/routes/lecturaRoutes.js');
+const alertaRoutes = require('./src/routes/alertaRoutes.js');
+const reporteRoutes = require('./src/routes/reporteRoutes.js');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/pacientes', pacienteRoutes);
