@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const admin = require('./src/config/firebase.js');  // ← Agregado .js
+const admin = require('./src/Config/firebase.js');  // ← Config con mayúscula
 const PORT = 3000;
 const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('./src/config/swagger.js');  // ← Agregado .js
+const swaggerSpec = require('./src/Config/swagger.js');  // ← Config con mayúscula
 
 app.use(express.json({ limit: '10mb' }));
 
