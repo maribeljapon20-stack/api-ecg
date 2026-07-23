@@ -1,5 +1,6 @@
 const alertaModel = require('../models/alertaModel');
 
+
 const listarAlertas = async (req, res) => {
     try {
         const alertas = await alertaModel.obtenerAlertasActivas();
